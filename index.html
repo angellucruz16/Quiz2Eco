@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <!-- Implemento bootstrap para hacer más estético el html-->
+   <!-- Documentación Bootstrap https://getbootstrap.com/docs/5.0/components/card/ -->
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+      crossorigin="anonymous"
+    />
+
+      <link rel="stylesheet" href="stylesheet.css" />
+
+    </head>
+
+    <title>Global Solutions</title>
+  </head>
+  <body onload="loadFun()">
+    <nav class="navbar navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img
+            src="/gs.png"
+            alt=""
+            width="30"
+            height="24"
+            class="d-inline-block align-text-top"
+          />
+          Global Solutions SAS by Angellu :)
+        </a>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="card card-add">
+          <h5 class="card-title">Nueva tarea</h5>
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Recipient's username"
+              aria-label="Recipient's username"
+              aria-describedby="button-addon2"
+            />
+            <button
+              class="btn btn-outline-secondary"
+              type="button"
+              id="button-addon2"
+            >
+              Button
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <button type="button" class="btn btn-lg btn-primary" disabled>
+            To do
+          </button>
+        </div>
+        <div class="col">
+          <button type="button" class="btn btn-lg btn-primary" disabled>
+            Doing
+          </button>
+        </div>
+        <div class="col">
+          <button type="button" class="btn btn-lg btn-primary" disabled>
+            Done
+          </button>
+        </div>
+      </div>
+      <div class="row" id="contents">
+        <div class="col" id="todo">
+          <div class="card card-list">
+            <div class="card-header">
+              <button onclick = "btn()" type = "button" class="btn btn-danger">X</button>
+            </div>
+            
+            <div class="card-body">
+                This is some text within a card body.
+            </div>
+            <div class="card-footer">
+              <button type="button" class="btn btn-info">Info</button>
+            </div>
+          </div>
+        </div>
+        <div class="col" id="doing"></div>
+        <div class="col" id="done"></div>
+      </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+
+  <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+  <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
+
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-firestore.js"></script>
+    <script src="logic.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
+      integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
+      integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
